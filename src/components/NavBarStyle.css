@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: black;
+}
+
+h1,
+h4,
+p,
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+}
+
+
+
+.header-bg{
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: 0.5s  ;
+}
+
+.nav-menu {
+    display: flex;
+    padding: 0 1rem;
+}
+
+.nav-menu li {
+    padding: 0 1rem;
+    list-style: none;
+
+}
+
+.nav-menu li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width:1040px) {
+    .nav-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: -3;
+        transition: 0.9s all ease;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        padding: 16px 0;
+    }
+
+    .nav-menu li a {
+        font-size: 2rem;
+    }
+
+    .hamburger {
+        display: initial;
+    }
+}
